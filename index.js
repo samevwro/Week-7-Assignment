@@ -26,7 +26,7 @@ console.log('---------Question 3---------');
 //using the length method I can find the last element of any array even after new objects have been added
 console.log(names[names.length-1])
 console.log('---------Question 4---------');
-//The first eleemnet of any array will always be 0 for the index since this is the start
+//The first elemenet of any array will always be 0 for the index since this is the start
 console.log(names[0])
 console.log('---------Question 5---------');
 let nameLengths = []
@@ -104,3 +104,31 @@ function willBuyDrink(isHotOutside, moneyInPocket) {
 }
 console.log(willBuyDrink(true, 10.50));
 console.log('---------Question 13---------');
+var apple = {
+    price: 0.5, 
+    quantity: 10};
+var pear = {
+    price: 0.35,
+    quantity: 15};
+var orange = {
+    price: 0.6, 
+    quantity: 8};
+let wallet = 10
+
+console.log(`We have ${apple.quantity} Apples, ${pear.quantity} Pears, and ${orange.quantity} Oranges`);
+function buyingFruit(apple, pear, orange) {
+    let leftOverCash = 0;    
+    let total1 = ((apple * this.apple.price)+(pear*this.pear.price)+(orange*this.orange.price));
+    leftOverCash += wallet -total1
+    if(apple>this.apple.quantity || pear>this.pear.quantity || orange>this.orange.quantity) {
+        return('We do not have enough fruit for your order');
+    }else if (total1 > wallet) {
+        return("You do not have enough money!!")
+    }
+    else {
+        console.log(`You bought ${apple} Apples, ${pear} Pears, and ${orange} Oranges`);
+        return(`You have $${leftOverCash.toFixed(2)} left over.`);
+    }
+
+}
+console.log(buyingFruit(7, 9, 5))
